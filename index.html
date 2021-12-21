@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="shortcut icon" href="#">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Add new task</h2>
+        </div>
+        <div class="col-md-8">
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add</button>
+<!--            <button class="btn btn-danger btn-removeSelected" type="button" >Remove Selected</button>-->
+            <button class="btn btn-danger btn-removeAll" type="button" >Remove All</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <hr>
+    </div>
+
+    <div class="row task-wrap">
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="task-input">Task text</label>
+                    <input type="text" class="form-control" id="task-input" placeholder="Enter task text">
+                    <small id="taskHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-addTask">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Change task</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="task-input">Task text</label>
+                    <input type="text" class="form-control" id="edit-input" placeholder="Enter task text">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-saveChanges">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
